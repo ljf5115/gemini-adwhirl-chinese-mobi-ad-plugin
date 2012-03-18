@@ -36,11 +36,11 @@ public class GmAdWhirlEventAdapterData {
 	public static final int CONST_DEFAULTADDEBUG_FORCEMODE_TYPE = AdWhirlUtil.NETWORK_TYPE_ADMOB;
 
 	// 是否为自定义广告强制调试模式（如果想仅调试某个类型的广告，请选择强制模式）
-	public static final boolean CONST_EVENTADDEBUG_FORCEMODE_ENABLED = false;
+	public static final boolean CONST_EVENTADDEBUG_FORCEMODE_ENABLED = true;
 	// 是否在自定义广告强制调试模式下获取广告失败时仍然继续循环强制显示该广告
 	// 默认为直接切换下一广告商，此设置将（在30秒后）重新尝试获取当前广告，
 	// 可用于配合CONST_EVENTADDEBUG_FORCEMODE_ENABLED选项编译固定版本供广告商测试使用。
-	public static final boolean CONST_EVENTADDEBUG_FORCELOOPMODE_ENABLED = false;
+	public static final boolean CONST_EVENTADDEBUG_FORCELOOPMODE_ENABLED = true;
 	// 自定义广告强制调试模式类型
 	public static final GmEventADType CONST_EVENTADDEBUG_FORCEMODE_TYPE1 = GmEventADType.vpon;
 
