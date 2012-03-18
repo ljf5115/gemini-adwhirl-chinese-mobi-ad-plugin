@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 首页Listview的footview布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout android:id="@+id/winad_loading_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/winad_footview_ProgressBar"
+            android:layout_width="31dip"
+            android:layout_height="32dip"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <TextView
+            android:id="@+id/winad_footview_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:paddingLeft="10dip"
+            android:singleLine="true"
+            android:text="数据加载中..."
+            android:textColor="#000000"
+            android:textSize="16.0dip"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/feedbacklayout"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:background="@drawable/winad_offer_feedback_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/feedbackbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:textColor="#1f1e1e" 
+            android:paddingLeft="15dip" 
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/winad_introduce_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dip"
+            android:background="@null"
+            android:paddingRight="5dip"
+            android:textColor="#1f1e1e" android:textStyle="bold"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/webwinad"
+            android:layout_width="wrap_content"
+            android:layout_height="23dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dip"
+            android:paddingTop="3dip" 
+            android:textColor="#545353" />
+    </LinearLayout>
+
+</LinearLayout>

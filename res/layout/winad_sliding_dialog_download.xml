@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- 是否下载对话框的布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:layout_margin="5.0dip" android:paddingBottom="15dip" >
+	<TextView android:layout_width="fill_parent"
+		android:textColor="#FFFFFF" android:id="@+id/moretop" android:layout_marginTop="10dip"
+		android:layout_height="25.0dip" android:textSize="18.0sp" android:text="是否下载推荐应用？"
+		android:layout_alignParentTop="true" android:gravity="center" />
+	
+	<RelativeLayout android:layout_width="fill_parent" android:layout_below="@+id/moretop" android:layout_marginTop="10.0dip"
+		android:id="@+id/relaytiveOne" 
+		android:layout_height="wrap_content" android:layout_marginLeft="5dip">
+		<ImageView android:id="@+id/dialog_image" android:gravity="center"
+			android:layout_width="48.0dip" android:layout_height="48.0dip"
+			android:layout_margin="5.0dip" android:src="@drawable/icon" />
+		<LinearLayout android:id="@+id/app" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:orientation="vertical"
+			android:layout_toRightOf="@+id/dialog_image"
+			android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip">
+			<TextView android:id="@+id/dialog_appname" android:textSize="16.0sp"
+				android:textColor="#000000" android:gravity="left"
+				android:singleLine="true" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<TextView android:id="@+id/dialog_abstruct"
+				android:textSize="13.0sp" android:textColor="#090909"
+				android:gravity="left" android:ellipsize="marquee"
+				android:singleLine="true" android:layout_marginRight="5dip"
+				android:layout_width="wrap_content" android:layout_height="18.0dip" 
+				android:layout_marginTop="10.0dip"/>
+		</LinearLayout>
+	</RelativeLayout>
+
+	<ImageView android:id="@+id/exchange_driver"
+		android:background="@drawable/winad_offer_dialog_head_line"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@+id/relaytiveOne" android:layout_marginLeft="10.0dip"
+		android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip"
+		android:layout_marginBottom="14.0dip"></ImageView>
+
+	<ScrollView android:id="@+id/exchange_ScrollView" 
+		android:layout_gravity="center" android:scrollbars="none"
+		android:layout_width="fill_parent" android:layout_height="120dip"
+		android:layout_marginLeft="15.0dip" android:layout_marginRight="10.0dip"
+		android:layout_marginBottom="5.0dip" android:layout_weight="1.0"
+		android:layout_below="@+id/exchange_driver">
+		<TextView android:id="@+id/dialog_detail" android:textSize="13.0sp"
+			android:textColor="#404040" android:scrollbars="vertical"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	</ScrollView>
+	<LinearLayout android:id="@+id/exchange_down"
+		android:layout_width="fill_parent" android:layout_below="@+id/exchange_ScrollView"
+		android:layout_height="wrap_content" android:layout_marginLeft="5dip"
+		android:layout_marginRight="5dip" >
+
+		<Button
+		    android:id="@+id/dialog_downLoad"
+		    style="@style/offers_activity_main_btn_style"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="15dip"
+		    android:layout_marginRight="10dip" 
+		    android:layout_weight="1.0"
+		    android:textSize="16.0sp" />
+
+		<Button android:id="@+id/dialog_cancel" android:textSize="16.0sp"
+			style="@style/offers_activity_main_btn_style"
+			android:layout_weight="1.0" android:layout_width="fill_parent"
+			android:layout_marginLeft="10dip" android:layout_height="wrap_content"
+			android:layout_marginRight="15dip" 
+			android:text="取消" />
+	</LinearLayout>
+</RelativeLayout>

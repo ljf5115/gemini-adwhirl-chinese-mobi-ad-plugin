@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geminiad.demo"
+    android:versionCode="158"
+    android:versionName="1.6.0" >
+
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name" >
+        <activity
+            android:label="@string/app_name"
+            android:name=".MainActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".AppShareActivity" />
+
+        <meta-data
+            android:name="com.view.AdView.pid"
+            android:value="AA6D47747386B5C99ABDE1A023136537" />
+
+        <service android:name="net.miidi.credit.MiidiCreditService" />
+
+        <activity android:name="net.miidi.credit.MiidiWebViewActivity" />
+        <activity android:name="net.miidi.credit.MiidiAppListActivity" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:name="com.wiyun.offer.OfferList" />
+
+        <meta-data
+            android:name="com.wiyun.sdk.channel"
+            android:value="m.yyhui" />
+
+        <activity
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:name="com.mt.airad.MultiAD"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.tapjoy.TJCOffersWebView" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.tapjoy.TapjoyFeaturedAppWebView" />
+
+        <receiver
+            android:exported="true"
+            android:name="com.tapjoy.TapjoyReferralTracker" >
+            <intent-filter >
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.mobfox.sdk.InAppWebView" />
+        <activity android:name="com.adpooh.adscast.PopAdsActivity" />
+        <activity android:name="com.adpooh.adscast.AdsWebViewActivity" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.lmmob.ad.sdk.LmMobAdWebView" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.lmmob.ad.sdk.LmMobFullImageActivity" />
+        <activity
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:name="net.youmi.android.AdActivity" />
+        <activity
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:name="net.youmi.android.appoffers.AppOffersActivity" />
+        <activity
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:name="com.google.ads.AdActivity" />
+        <activity
+            android:label="@string/app_name"
+            android:name="com.adwo.adsdk.AdwoAdBrowserActivity" />
+        <activity
+            android:name="cn.domob.android.ads.DomobActivity"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:name="com.baidu.AppActivity" />
+
+        <meta-data
+            android:name="BaiduMobAd_APP_ID"
+            android:value="debug" />
+        <meta-data
+            android:name="BaiduMobAd_APP_SEC"
+            android:value="debug" />
+
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:name="com.wooboo.adlib_android.AdActivity" />
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:name="com.wooboo.adlib_android.FullActivity" />
+        <activity
+            android:configChanges="orientation|keyboardHidden|navigation|keyboard"
+            android:label="@string/app_name"
+            android:name="com.vpon.adon.android.WebInApp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.waps.DialogView"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.waps.OffersWebView" />
+
+        <meta-data
+            android:name="WAPS_ID"
+            android:value="08742d668b6d33ef174133a450b1b369" />
+        <meta-data
+            android:name="WAPS_PID"
+            android:value="appChina" />
+        <meta-data
+            android:name="APP_ID"
+            android:value="037810BCE1D2260F32017643AC7D980C" />
+        <meta-data
+            android:name="APP_INTERVAL"
+            android:value="30" />
+        <meta-data
+            android:name="APP_TESTMODE"
+            android:value="true" />
+
+        <activity android:name="com.tencent.mobwin.MobinWINBrowserActivity" >
+        </activity>
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.uucun.adsdk.OfferActivity" />
+
+        <meta-data
+            android:name="UU_APP_KEY"
+            android:value="BOSdDuUDTDsZzLgt6YpVpDqQKkh6nUzF" />
+        <meta-data
+            android:name="UU_CHANNEL_ID"
+            android:value="APPJOY" />
+
+        <activity android:name="com.winad.android.banner.util.VideoPlayerActivity" />
+
+        <receiver android:name="com.winad.android.banner.ads.ReciveInstallPackage" >
+            <intent-filter >
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.winad.offers.OffersActivity" />
+        <activity android:name="com.winad.offers.DetialIntroduceActivity" />
+        <activity
+            android:name="com.winad.offers.FeedBack"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.winad.offers.FeedBackInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.winad.offers.VideoPlayerActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name="com.winad.push.PushContentActivity" />
+
+        <receiver android:name="com.winad.push.BootReceiver" >
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.winad.push.MyService" >
+        </service>
+
+        <meta-data
+            android:name="PUBLISHER_ID_BANNER"
+            android:value="01FCC5467D5E7FCD4FB246E236037183" />
+        <meta-data
+            android:name="TESTMODE_BANNER"
+            android:value="false" />
+        <meta-data
+            android:name="PUBLISHER_ID_OFFERS"
+            android:value="01FCC5467D5E7FCD4FB246E236037183" />
+        <meta-data
+            android:name="TESTMODE_OFFERS"
+            android:value="false" />
+
+        <activity android:name="cn.appmedia.ad.AdActivity" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.dianjoy.DianjoyOfferActivity" />
+
+        <service android:name="com.dianjoy.DianjoyOfferHelpService" />
+
+        <meta-data
+            android:name="DIANJOY_APP_ID"
+            android:value="8c6ac1852aa27708d028eca8cc0412ac" />
+        <meta-data
+            android:name="DIANJOY_CLIENT_PACKAGE"
+            android:value="com.geminiad.demo" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="YINGYONGHUI" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="4e1be8ad431fe30cd3000003" />
+
+        <activity android:name="com.mobclick.android.UmengFeedback" />
+        <activity
+            android:name="com.feedback.ui.SendFeedback"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.feedback.ui.FeedbackConversations" />
+        <activity
+            android:configChanges="keyboard"
+            android:name="com.feedback.ui.FeedbackConversation" />
+    </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    
+    <uses-sdk android:minSdkVersion="7" />
+
+</manifest>

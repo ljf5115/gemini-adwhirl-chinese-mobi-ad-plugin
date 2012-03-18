@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:background="@drawable/winad_offer_head_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/offer_back_btn"
+        android:layout_width="50dip"
+        android:layout_height="30dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/winad_offer_list_button_bg"
+        android:text="返回"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/winad_title_TextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp" />
+
+    <LinearLayout
+        android:id="@+id/winad_userScoreNotic_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/winad_userScore_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/winad_offer_coin"
+            android:gravity="bottom"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/winad_myScorelabe_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>
