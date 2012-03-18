@@ -30,6 +30,6 @@
 	<classpathentry kind="lib" path="libs/dianjoy2.5.jar"/>
 	<classpathentry kind="lib" path="libs/casee-ad-sdk-2.9.jar"/>
 	<classpathentry kind="lib" path="libs/AndroidAnalyticSDK3.1.1.jar"/>
-	<classpathentry kind="lib" path="Y:/GmProjects/Source/Android/library/libs/gmdev/advertise/adchina_android_sdk.jar"/>
+	<classpathentry kind="lib" path="libs/adchina_android_sdk.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
