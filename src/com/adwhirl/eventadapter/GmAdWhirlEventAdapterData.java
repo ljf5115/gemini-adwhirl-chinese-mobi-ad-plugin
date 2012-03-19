@@ -42,7 +42,7 @@ public class GmAdWhirlEventAdapterData {
 	// 可用于配合CONST_EVENTADDEBUG_FORCEMODE_ENABLED选项编译固定版本供广告商测试使用。
 	public static final boolean CONST_EVENTADDEBUG_FORCELOOPMODE_ENABLED = false;
 	// 自定义广告强制调试模式类型
-	public static final GmEventADType CONST_EVENTADDEBUG_FORCEMODE_TYPE1 = GmEventADType.vpon;
+	public static final GmEventADType CONST_EVENTADDEBUG_FORCEMODE_TYPE1 = GmEventADType.wqmobile;
 
 	// 是否为设置默认的自定义广告分配
 	public static final boolean CONST_ADDEBUG_USEDEFAULTRATION_ENABLED = true;
@@ -255,6 +255,8 @@ public class GmAdWhirlEventAdapterData {
 				ration.key = "cn_winad|;|adWhirlEventInterstitial_winad";
 			} else if (mForceEventADType == GmEventADType.casee) {
 				ration.key = "cn_casee|;|adWhirlEventInterstitial_casee";
+			} else if (mForceEventADType == GmEventADType.wqmobile) {
+				ration.key = "cn_wqmobile|;|adWhirlEventInterstitial_wqmobile";
 			}
 		}
 	}

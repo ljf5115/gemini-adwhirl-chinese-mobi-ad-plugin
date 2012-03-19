@@ -18,7 +18,7 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 
 	public enum GmEventADType {
 		// domestic
-		vpon, mobwin, domob, waps, adchina, smartmad, airad, appmedia, vpontw, adwo, lmmob, winad, youmi, wiyun, baidu, zhidian, dipai, wooboo, anji, appjoy, casee,
+		vpon, mobwin, domob, waps, adchina, smartmad, airad, appmedia, vpontw, wqmobile, adwo, lmmob, winad, youmi, wiyun, baidu, zhidian, dipai, wooboo, anji, appjoy, casee,
 		// international
 		tapjoy, mobfox,
 	};
@@ -49,6 +49,7 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 		case wiyun:
 		case dipai:
 		case wooboo:
+		case wqmobile:
 		case anji:
 		case zhidian:
 		case appjoy:
@@ -191,6 +192,9 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 		case wooboo:
 			mAdapter = new GmAdWhirlEventAdapter_cn_wooboo(adLayout, null);
 			break;
+		case wqmobile:
+			mAdapter = new GmAdWhirlEventAdapter_cn_wqmobile(adLayout, null);
+			break;
 		case youmi:
 			mAdapter = new GmAdWhirlEventAdapter_cn_youmi(adLayout, null);
 			break;
@@ -286,6 +290,10 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 
 	public void adWhirlEventInterstitial_wooboo() throws Exception {
 		createEventAdapter(GmEventADType.wooboo);
+	}
+
+	public void adWhirlEventInterstitial_wqmobile() throws Exception {
+		createEventAdapter(GmEventADType.wqmobile);
 	}
 
 	public void adWhirlEventInterstitial_youmi() throws Exception {

@@ -259,6 +259,9 @@ public class MainActivity extends Activity {
 		case casee:
 			ret = "架势";
 			break;
+		case wqmobile:
+			ret = "帷千动媒";
+			break;
 		}
 		return ret;
 	}
