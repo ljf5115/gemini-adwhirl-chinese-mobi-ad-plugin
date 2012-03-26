@@ -29,6 +29,7 @@ public class GmAdWhirlEventAdapter_cn_wqmobile extends
 			mADView = new ADView(activity);
 			mADView.Init(activity.getResources().openRawResource(
 					R.raw.wqappsetting));
+			mADView.setAdReceiveCallBack(this);
 
 			RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
 					RelativeLayout.LayoutParams.FILL_PARENT,
@@ -49,7 +50,7 @@ public class GmAdWhirlEventAdapter_cn_wqmobile extends
 		AdWhirlLayout tmpLayout = getAdwhirlLayout();
 		if (tmpLayout != null) {
 			if (mADView != null) {
-				// mADView.setListener(null);
+				mADView.setAdReceiveCallBack(null);
 				mADView.setVisibility(View.GONE);
 				tmpLayout.removeView(mADView);
 				mADView = null;
