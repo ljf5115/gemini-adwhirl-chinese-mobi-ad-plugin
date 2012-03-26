@@ -33,5 +33,6 @@
 	<classpathentry kind="lib" path="libs/WQAndroidSDK_2.0.2.jar"/>
 	<classpathentry kind="lib" path="libs/Tencent_MobWIN_BASIC_1.2.jar"/>
 	<classpathentry kind="lib" path="libs/Tencent_MobWIN_SDK_1.3.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

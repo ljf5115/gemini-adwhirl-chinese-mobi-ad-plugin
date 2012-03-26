@@ -8,9 +8,10 @@ import com.adwhirl.AdWhirlLayout;
 import com.adwhirl.eventadapter.IGmAdWhirlEventAdapter.GmAdWhirlCustomEventAdapter;
 import com.geminiad.demo.R;
 import com.wqmobile.sdk.widget.ADView;
+import com.wqmobile.sdk.widget.WQCallback;
 
-
-public class GmAdWhirlEventAdapter_cn_wqmobile extends GmAdWhirlCustomEventAdapter {
+public class GmAdWhirlEventAdapter_cn_wqmobile extends
+		GmAdWhirlCustomEventAdapter implements WQCallback {
 
 	private ADView mADView;
 
@@ -26,14 +27,15 @@ public class GmAdWhirlEventAdapter_cn_wqmobile extends GmAdWhirlCustomEventAdapt
 		if (adLayout != null) {
 			Activity activity = getAdwhirlActivity();
 			mADView = new ADView(activity);
-			mADView.Init(activity.getResources().openRawResource(R.raw.wqappsetting));
+			mADView.Init(activity.getResources().openRawResource(
+					R.raw.wqappsetting));
 
 			RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
 					RelativeLayout.LayoutParams.FILL_PARENT,
 					RelativeLayout.LayoutParams.WRAP_CONTENT);
-//			EditText text = new EditText(act);
-//			text.setWidth(LayoutParams.FILL_PARENT);
-//			text.setHeight(60);
+			// EditText text = new EditText(act);
+			// text.setWidth(LayoutParams.FILL_PARENT);
+			// text.setHeight(60);
 			adLayout.addView(mADView, lp);
 			// Show AD for certain seconds (extra.cycleTime).
 			rotateThreadedDelayed();
@@ -47,7 +49,7 @@ public class GmAdWhirlEventAdapter_cn_wqmobile extends GmAdWhirlCustomEventAdapt
 		AdWhirlLayout tmpLayout = getAdwhirlLayout();
 		if (tmpLayout != null) {
 			if (mADView != null) {
-				//mADView.setListener(null);
+				// mADView.setListener(null);
 				mADView.setVisibility(View.GONE);
 				tmpLayout.removeView(mADView);
 				mADView = null;
@@ -55,6 +57,36 @@ public class GmAdWhirlEventAdapter_cn_wqmobile extends GmAdWhirlCustomEventAdapt
 			}
 		}
 		super.dispose();
+	}
+
+	@Override
+	public void didFailReceiveAd() {
+		gmEventAdapterLog("wqmobile->onFailedToReceiveFreshAd");
+		if (isActiveAdView(mADView)) {
+			if (!isAdFetchDone()) {
+				doRollover();
+				setAdFetchDone(true);
+				gmEventAdapterLog("wqmobile->doRollover");
+			}
+		}
+	}
+
+	@Override
+	public void didReceiveAd() {
+		gmEventAdapterLog("wqmobile->onReceivedFreshAd");
+		if (isActiveAdView(mADView)) {
+			if (!isAdFetchDone()) {
+				AdWhirlLayout adLayout = getAdwhirlLayout();
+				if (adLayout != null) {
+					adLayout.adWhirlManager.resetRollover();
+					countImpression();
+				}
+				setAdFetchDone(true);
+				gmEventAdapterLog("wqmobile->resetRollover");
+			} else {
+				countImpression();
+			}
+		}
 	}
 
 }
