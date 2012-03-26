@@ -10,7 +10,6 @@ import com.adchina.android.ads.AdEngine;
 import com.adchina.android.ads.AdListener;
 import com.adchina.android.ads.AdManager;
 import com.adchina.android.ads.views.AdView;
-import com.adchina.android.ads.views.ShrinkFSAdView;
 import com.adchina.android.ads.views.animations.AnimationManager;
 import com.adwhirl.AdWhirlLayout;
 import com.adwhirl.eventadapter.GmAdWhirlEventHandler.GmEventADType;
@@ -137,12 +136,6 @@ public class GmAdWhirlEventAdapter_cn_adchina extends
 	}
 
 	@Override
-	public void onFailedToReceiveShrinkFSAd(ShrinkFSAdView arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void onFailedToReceiveVideoAd() {
 		// TODO Auto-generated method stub
 
@@ -188,12 +181,6 @@ public class GmAdWhirlEventAdapter_cn_adchina extends
 	}
 
 	@Override
-	public void onReceiveShrinkFSAd(ShrinkFSAdView arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void onRefreshAd(AdView arg0) {
 		gmEventAdapterLog("adchina->onRefreshAd");
 		if (mADView != null) {
@@ -210,6 +197,18 @@ public class GmAdWhirlEventAdapter_cn_adchina extends
 
 	@Override
 	public void onReceiveVideoAd() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onEndFullScreenLandpage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onStartFullScreenLandPage() {
 		// TODO Auto-generated method stub
 		
 	}
