@@ -259,6 +259,12 @@ public class MainActivity extends Activity {
 		case casee:
 			ret = "架势";
 			break;
+		case dianru:
+			ret = "点入";
+			break;
+		case dianjin:
+			ret = "点金";
+			break;
 		}
 		return ret;
 	}

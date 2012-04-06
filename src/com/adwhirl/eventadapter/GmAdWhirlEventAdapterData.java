@@ -101,6 +101,15 @@ public class GmAdWhirlEventAdapterData {
 	// 架势
 	private static final String CONST_STR_APPID_CASEE = "1550CFCB0F7A0205C4EC7F990C1020E4";
 
+	// 点入
+	// 注意：点入的APPID需要存放在AndroidManifest.xml中
+	private static final String CONST_STR_APPID_DIANRU = "KEY00001404050000C5";
+	
+	// 点金
+	// 注意：因为点金的APPID使用的是整形数值，而本代码使用的是字符串，
+	// 所以请以字符串形式填写，代码内部会在适当时候转换该值。
+	private static final String CONST_STR_APPID_DIANJIN = "10";
+	private static final String CONST_STR_KEY_DIANJIN = "a7d3ccc9d223e88298e4d7bb54d5f59f";
 	// --------------------------------------------------------------------------------
 	// 自定义广告强制调试模式配置函数
 	// --------------------------------------------------------------------------------
@@ -255,6 +264,10 @@ public class GmAdWhirlEventAdapterData {
 				ration.key = "cn_winad|;|adWhirlEventInterstitial_winad";
 			} else if (mForceEventADType == GmEventADType.casee) {
 				ration.key = "cn_casee|;|adWhirlEventInterstitial_casee";
+			} else if (mForceEventADType == GmEventADType.dianru) {
+				ration.key = "cn_dianru|;|adWhirlEventInterstitial_dianru";
+			} else if (mForceEventADType == GmEventADType.dianjin) {
+				ration.key = "cn_dianjin|;|adWhirlEventInterstitial_dianjin";
 			}
 		}
 	}
@@ -328,6 +341,12 @@ public class GmAdWhirlEventAdapterData {
 		case casee:
 			ret = CONST_STR_APPID_CASEE;
 			break;
+		case dianru:
+			ret = CONST_STR_APPID_DIANRU;
+			break;
+		case dianjin:
+			ret = CONST_STR_APPID_DIANJIN;
+			break;
 		}
 		return ret;
 	}
@@ -353,6 +372,9 @@ public class GmAdWhirlEventAdapterData {
 			break;
 		case wiyun:
 			ret = CONST_STR_PWDID_WIYUN;
+			break;
+		case dianjin:
+			ret = CONST_STR_KEY_DIANJIN;
 			break;
 		}
 		return ret;

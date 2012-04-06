@@ -18,7 +18,7 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 
 	public enum GmEventADType {
 		// domestic
-		vpon, mobwin, domob, waps, adchina, smartmad, airad, appmedia, vpontw, adwo, lmmob, winad, youmi, wiyun, baidu, zhidian, dipai, wooboo, anji, appjoy, casee,
+		vpon, mobwin, domob, waps, adchina, smartmad, airad, appmedia, vpontw, adwo, lmmob, winad, youmi, wiyun, baidu, zhidian, dipai, wooboo, anji, appjoy, casee, dianru, dianjin,
 		// international
 		tapjoy, mobfox,
 	};
@@ -54,6 +54,8 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 		case appjoy:
 		case winad:
 		case casee:
+		case dianru:
+		case dianjin:
 			ret = AdWhirlUtil.CONST_INT_ADLANGUAGE_CHINESE;
 			break;
 		}
@@ -197,6 +199,12 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 		case zhidian:
 			mAdapter = new GmAdWhirlEventAdapter_cn_zhidian(adLayout, null);
 			break;
+		case dianru:
+			mAdapter = new GmAdWhirlEventAdapter_cn_dianru(adLayout, null);
+			break;
+		case dianjin:
+			mAdapter = new GmAdWhirlEventAdapter_cn_dianjin(adLayout, null);
+			break;
 		case mobfox:
 			mAdapter = new GmAdWhirlEventAdapter_mobfox(adLayout, null);
 			break;
@@ -284,6 +292,14 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 		createEventAdapter(GmEventADType.wiyun);
 	}
 
+	public void adWhirlEventInterstitial_dianru() throws Exception {
+		createEventAdapter(GmEventADType.dianru);
+	}
+	
+	public void adWhirlEventInterstitial_dianjin() throws Exception {
+		createEventAdapter(GmEventADType.dianjin);
+	}
+	
 	public void adWhirlEventInterstitial_wooboo() throws Exception {
 		createEventAdapter(GmEventADType.wooboo);
 	}
@@ -303,4 +319,5 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 	public void adWhirlEventInterstitial_tapjoy() throws Exception {
 		createEventAdapter(GmEventADType.tapjoy);
 	}
+	
 }

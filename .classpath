@@ -31,5 +31,7 @@
 	<classpathentry kind="lib" path="libs/casee-ad-sdk-2.9.jar"/>
 	<classpathentry kind="lib" path="libs/AndroidAnalyticSDK3.1.1.jar"/>
 	<classpathentry kind="lib" path="libs/adchina_android_sdk.jar"/>
+	<classpathentry kind="lib" path="libs/dianjin.jar"/>
+	<classpathentry kind="lib" path="libs/dianru_andriod_sdk.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
