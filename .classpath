@@ -30,14 +30,11 @@
 	<classpathentry kind="lib" path="libs/casee-ad-sdk-2.9.jar"/>
 	<classpathentry kind="lib" path="libs/AndroidAnalyticSDK3.1.1.jar"/>
 	<classpathentry kind="lib" path="libs/adchina_android_sdk.jar"/>
-<<<<<<< HEAD
 	<classpathentry kind="lib" path="libs/dianjin.jar"/>
 	<classpathentry kind="lib" path="libs/dianru_andriod_sdk.jar"/>
-=======
 	<classpathentry kind="lib" path="libs/WQAndroidSDK_2.0.2.jar"/>
 	<classpathentry kind="lib" path="libs/Tencent_MobWIN_BASIC_1.2.jar"/>
 	<classpathentry kind="lib" path="libs/Tencent_MobWIN_SDK_1.3.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
->>>>>>> a807bcde6b249234cf14e25065145a3594fa8986
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
