@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.geminiad.demo"
-    android:versionCode="158"
-    android:versionName="1.6.0" >
+    android:versionCode="159"
+    android:versionName="1.6.1" >
 
     <application
         android:debuggable="true"
@@ -28,6 +28,11 @@
         <service android:name="net.miidi.credit.MiidiCreditService" />
 
         <activity android:name="net.miidi.credit.MiidiWebViewActivity" />
+		<activity android:name="com.nd.dianjin.activity.OfferAppActivity"
+			android:configChanges="keyboardHidden|orientation"
+			android:launchMode="singleTask"
+			android:screenOrientation="portrait"
+		/>
         <activity android:name="net.miidi.credit.MiidiAppListActivity" />
         <activity
             android:configChanges="keyboardHidden|orientation"
@@ -166,7 +171,10 @@
             android:name="com.winad.offers.VideoPlayerActivity"
             android:screenOrientation="landscape" />
         <activity android:name="com.winad.push.PushContentActivity" />
-
+        <activity android:name="com.dianru.sdk.AdActivity" android:theme = "@android:style/Theme.Translucent">
+         	 <meta-data android:name="com.dianru.sdk.keycode" android:value="KEY00001404050000C5" />
+         	 <meta-data android:name="com.dianru.sdk.notify" android:value="false" />
+         </activity> 
         <receiver android:name="com.winad.push.BootReceiver" >
             <intent-filter >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -217,6 +225,12 @@
         <activity
             android:configChanges="keyboard"
             android:name="com.feedback.ui.FeedbackConversation" />
+        <receiver android:name="com.nd.dianjin.broadcastreceiver.PackagedChangedBroadcastReceiver"> 
+			<intent-filter > 
+				<action android:name="android.intent.action.PACKAGE_ADDED" /> 
+				<data android:scheme="package" /> 
+			</intent-filter> 
+		</receiver>
     </application>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
