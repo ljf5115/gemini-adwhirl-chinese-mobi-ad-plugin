@@ -175,11 +175,11 @@ public class GmAdWhirlEventHandler implements AdWhirlInterface,
 			mAdapter = new GmAdWhirlEventAdapter_cn_smartmad(adLayout, null);
 			break;
 		case vpon:
-			mAdapter = new GmAdWhirlEventAdapter_cn_vpon(adLayout, new Integer(
+			mAdapter = new GmAdWhirlEventAdapter_cn_vpon(adLayout, Integer.valueOf(
 					CONST_INT_VPON_CN));
 			break;
 		case vpontw:
-			mAdapter = new GmAdWhirlEventAdapter_cn_vpon(adLayout, new Integer(
+			mAdapter = new GmAdWhirlEventAdapter_cn_vpon(adLayout, Integer.valueOf(
 					CONST_INT_VPON_TW));
 			break;
 		case waps:
