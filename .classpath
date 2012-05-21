@@ -18,7 +18,6 @@
 	<classpathentry kind="lib" path="libs/adwosdk2.5.1.jar"/>
 	<classpathentry kind="lib" path="libs/uu_ad_sdk_1.0.0.jar"/>
 	<classpathentry kind="lib" path="libs/TapjoyOffers.jar"/>
-	<classpathentry kind="lib" path="libs/domob_android_sdk-2.0.2.jar"/>
 	<classpathentry kind="lib" path="libs/AppMediaAdAndroidSdk-1.0.5-adwhirl.jar"/>
 	<classpathentry kind="lib" path="libs/adOn-3.0.3.jar"/>
 	<classpathentry kind="lib" path="libs/winAdBanner-android-sdk.jar"/>
@@ -36,5 +35,6 @@
 	<classpathentry kind="lib" path="libs/Tencent_MobWIN_BASIC_1.2.jar"/>
 	<classpathentry kind="lib" path="libs/Tencent_MobWIN_SDK_1.3.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="Y:/GmProjects/Source/Android/library/libs/gmdev/advertise/domob_android_sdk-3.0.0.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

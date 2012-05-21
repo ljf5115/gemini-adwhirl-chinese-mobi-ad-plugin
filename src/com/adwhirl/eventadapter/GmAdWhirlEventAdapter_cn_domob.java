@@ -21,30 +21,35 @@ class GmAdWhirlEventAdapter_cn_domob extends GmAdWhirlCustomEventAdapter
 		super(adLayout, obj);
 	}
 
-	static {
-		DomobAdManager.setPublisherId(GmAdWhirlEventAdapterData
-				.getPublishID(GmEventADType.domob));
-	}
+	// static {
+	// DomobAdManager.setPublisherId(GmAdWhirlEventAdapterData
+	// .getPublishID(GmEventADType.domob));
+	// }
 
 	@Override
 	protected void init(Object obj) {
 		gmEventAdapterLog("domob->init");
 		AdWhirlLayout adLayout = getAdwhirlLayout();
 		if (adLayout != null) {
-			mADView = new DomobAdView(getAdwhirlActivity());
-			mADView.setAdListener(this);
+			mADView = new DomobAdView(
+					getAdwhirlActivity(),
+					GmAdWhirlEventAdapterData.getPublishID(GmEventADType.domob),
+					DomobAdView.INLINE_SIZE_320X50);
+			mADView.setOnAdListener(this);
 
 			Extra extra = adLayout.extra;
 			int bgColor = Color.rgb(extra.bgRed, extra.bgGreen, extra.bgBlue);
 			int fgColor = Color.rgb(extra.fgRed, extra.fgGreen, extra.fgBlue);
 			mADView.setBackgroundColor(bgColor);
-			mADView.setPrimaryTextColor(fgColor);
+			// mADView.setPrimaryTextColor(fgColor);
 			// mADView.setRequestInterval(10 * 60); // according to DOMOB's doc.
 			// mADView.setKeywords(/*keywords*/);
 
-			if (GmAdWhirlEventAdapterData.getDebugEnabled(GmEventADType.domob)) {
-				DomobAdManager.setIsTestMode(true);
-			}
+			// if
+			// (GmAdWhirlEventAdapterData.getDebugEnabled(GmEventADType.domob))
+			// {
+			// DomobAdManager.setIsTestMode(true);
+			// }
 
 			RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
 					RelativeLayout.LayoutParams.FILL_PARENT,
@@ -64,7 +69,7 @@ class GmAdWhirlEventAdapter_cn_domob extends GmAdWhirlCustomEventAdapter
 		if (tmpLayout != null) {
 			if (mADView != null) {
 				mADView.setVisibility(View.GONE);
-				mADView.setAdListener(null);
+				mADView.setOnAdListener(null);
 				tmpLayout.removeView(mADView);
 				mADView = null;
 				gmEventAdapterLog("domob->removed");
