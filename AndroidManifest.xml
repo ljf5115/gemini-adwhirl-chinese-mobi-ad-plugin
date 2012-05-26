@@ -171,10 +171,11 @@
             android:name="com.winad.offers.VideoPlayerActivity"
             android:screenOrientation="landscape" />
         <activity android:name="com.winad.push.PushContentActivity" />
-        <activity android:name="com.dianru.sdk.AdActivity" android:theme = "@android:style/Theme.Translucent">
-         	 <meta-data android:name="com.dianru.sdk.keycode" android:value="KEY00001404050000C5" />
-         	 <meta-data android:name="com.dianru.sdk.notify" android:value="false" />
-         </activity> 
+        
+		<activity android:name="com.dianru.sdk.AdActivity" android:theme="@android:style/Theme.Translucent">
+		<meta-data android:name="com.dianru.sdk.keycode" android:value="KEY00001404050000C5" />
+		</activity>
+	
         <receiver android:name="com.winad.push.BootReceiver" >
             <intent-filter >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

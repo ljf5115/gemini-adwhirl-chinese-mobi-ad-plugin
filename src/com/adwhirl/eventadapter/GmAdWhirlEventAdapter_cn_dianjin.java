@@ -42,17 +42,9 @@ public class GmAdWhirlEventAdapter_cn_dianjin extends GmAdWhirlCustomEventAdapte
 			colorConfig.setDetailColor(0xFFFF3300);
 			colorConfig.setNameColor(0xFFFF3300);
 			colorConfig.setRewardColor(0xFFFF3300);
-			int id = 0;
-			try {
-				id = Integer.parseInt(GmAdWhirlEventAdapterData
-						.getPublishID(GmEventADType.dianjin));
-			} catch (Exception e) {
-
-			}	
 			initialize(getAdwhirlActivity());
-			mOfferBanner = new OfferBanner(getAdwhirlActivity(), id,
-					GmAdWhirlEventAdapterData.getDefaultPwdID(GmEventADType.dianjin),
-					6000, OfferBanner.AnimationType.ANIMATION_PUSHUP, colorConfig);
+			mOfferBanner = new OfferBanner(getAdwhirlActivity(), 10000, 
+					OfferBanner.AnimationType.ANIMATION_PUSHLEFT, colorConfig);
 
 			adLayout.addView(mOfferBanner);
 			// Show AD for certain seconds (extra.cycleTime).
